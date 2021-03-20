@@ -10,6 +10,13 @@ class Loginpage extends React.Component {
     }
   }
 
+  componentDidMount() {
+    let token = localStorage.getItem("token");
+    if (!token) {
+      console.log("login required")
+    }
+  }
+
   firebasetoken () {
     const cb = (x) => {
       this.setState({ idToken: x })
