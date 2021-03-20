@@ -10,15 +10,18 @@ class Loginpage extends React.Component {
     }
   }
 
-  checkIfLogin = () => {
+  checkIfLogin = (x) => {
     let token = localStorage.getItem("token");
     if (token) {
-      this.props.history.push("more");
+      if(x)
+        this.props.history.push("more");
+      else
+        this.props.history.push("dash")
       console.log("pushed to more")
     }
   }
   componentDidMount() {
-    this.checkIfLogin()
+    this.checkIfLogin(false)
   }
 
   firebasetoken () {
@@ -26,8 +29,8 @@ class Loginpage extends React.Component {
       this.setState({ idToken: x })
       // console.log(this.state.idToken);
     }
-    const cb1 =() => {
-      this.checkIfLogin()
+    const cb1 =(v) => {
+      this.checkIfLogin(v)
     }
     const firebaseConfig = {
       apiKey: 'AIzaSyBLXwEsbaAuOUr9N_Q9kpBVY-vSWEjm8zs',
@@ -52,7 +55,7 @@ class Loginpage extends React.Component {
           .then(data => {
             console.log(data)
             localStorage.setItem('token', data.jwt)
-            cb1()
+            cb1(data.firstLogin)
           }) // Result from the `response.json()` call
           .catch(error => console.error(error))
 
