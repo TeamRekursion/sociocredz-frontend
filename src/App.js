@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch , Route} from 'react-router-dom';
 // import {Link} from 'react-router-dom';
 // import Dashnav from './components/dashnav';
 
-function App() {
+function App () {
   return (
     <Router>
     <div className="App">
@@ -17,11 +17,11 @@ function App() {
       </Switch>
       {/* <Dashnav/> */}
       {/* <Loginpage/> */}
-      {/* <More/> */}
+      {/* <More /> */}
       {/* <Landingpage/> */}
     </div>
     </Router>
   );
 }
 
-export default App;
+export default App

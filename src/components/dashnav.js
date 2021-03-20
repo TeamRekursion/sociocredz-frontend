@@ -11,11 +11,11 @@ import postA from '../Assets/post_selected.svg';
 import donation from '../Assets/donations_unselected.svg';
 // import campaignsA from '../Assets/campaigns_selected';
 
-class Dashnav extends React.Component{
-    constructor(props) {
-        super(props);
-        this.state = {};
-      }
+class Dashnav extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {}
+  }
 
       componentDidMount() {
       }
@@ -48,4 +48,4 @@ class Dashnav extends React.Component{
               )
       }
 }
-export default Dashnav;
+export default Dashnav
