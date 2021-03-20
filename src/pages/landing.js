@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/navbar';
+import Democarasol from '../components/carasol';
 
 class Landingpage extends React.Component{
     constructor(props) {
@@ -13,6 +14,7 @@ class Landingpage extends React.Component{
         return(
           <div>
               <Navbar/>
+              <Democarasol/>
               Landing page <br/>
           </div>
               )
