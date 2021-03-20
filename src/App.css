@@ -14,7 +14,7 @@
     font-weight: 700;
     color: black;
 }
-button{
+.logibut{
     width:150px;
     height: 45px;
     border-radius: 45px;
@@ -24,6 +24,72 @@ button{
     font-weight: 700;
     font-size: 15px;
 }
+.signu{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    background-color:#FC9F25;
+    font-size: 16px;
+    color: white;
+    border-style: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+.carasol{
+    width:80%;
+    margin: 20px auto;
+    border-radius: 30px;
+    text-align: center;
+}
+.left{
+    width: 35%;
+    height: 100vh;
+    background-color: grey;
+}
+.logcont{
+    display: flex;
+    /* height: 100%; */
+}
+.rig{
+    padding-top: 120px;
+    width: 380px;
+    margin-left: 100px;
+    /* height: 600px; */
+    /* border-style: solid; */
+    /* border-color: black; */
+    align-items: center;
+}
+.or{
+    margin: 30px 0px;
+    text-align: center;
+}
+.loglab{
+    font-weight: 600;
+}
+.logpu{
+    width: 100%;
+    height: 40px;
+    border-style: none;
+    background-color: #f4f4f4;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+.formb{
+    margin-top: 40px;
+    width:45%;
+    height: 40px;
+    border-radius: 15px;
+    border-style: none;
+    background-color: #A41BE4;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+
+
 /* .logo{
     display: inline-block;
 }
