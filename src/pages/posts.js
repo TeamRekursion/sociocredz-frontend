@@ -2,6 +2,7 @@ import React from 'react'
 import Dashnav from '../components/dashnav';
 import Campcard from '../components/campcard';
 import api from '../utils/apiCalls';
+import PostCard from "../components/PostCard";
 // import Democarasol from '../components/caraso/l'
 
 class Posts extends React.Component {
@@ -14,6 +15,11 @@ class Posts extends React.Component {
   constructor (props) {
     super(props)
   }
+
+  // fetchLast = () => {
+  //   api.FetchCampaigns
+  // }
+
 
   componentDidMount () {
     let token = localStorage.getItem("token")
@@ -60,7 +66,7 @@ class Posts extends React.Component {
             </form>
           </div>
           <div className="rightg">
-            <Campcard/>
+            <PostCard/>
           </div>
         </div>
       </div>

@@ -10,13 +10,14 @@ class Landingpage extends React.Component {
     tagline: '',
     desc: '',
     moneyRaised:'',
-    token: ''
+    token: '',
+
   }
   constructor (props) {
     super(props)
   }
 
-  componentDidMount () {
+  async componentDidMount () {
     let token = localStorage.getItem("token")
     this.setState({
       token,
