@@ -26,10 +26,10 @@
 }
 .signu{
     width: 100%;
-    height: 50px;
+    height: 60px;
     border-radius: 10px;
     background-color:#FC9F25;
-    font-size: 16px;
+    font-size: 20px;
     color: white;
     border-style: none;
     cursor: pointer;
@@ -53,11 +53,17 @@
 }
 .rig{
     padding-top: 120px;
-    width: 380px;
+    width: 420px;
     margin-left: 100px;
     /* height: 600px; */
     /* border-style: solid; */
     /* border-color: black; */
+    align-items: center;
+}
+.righ{
+    padding-top: 60px;
+    width: 500px;
+    margin-left: 100px;
     align-items: center;
 }
 .or{
@@ -70,6 +76,15 @@
 .logpu{
     width: 100%;
     height: 40px;
+    border-style: none;
+    background-color: #f4f4f4;
+    margin-top: 10px;
+    border-radius: 6px;
+    outline: none;
+}
+.logput{
+    width: 100%;
+    height: 200px;
     border-style: none;
     background-color: #f4f4f4;
     margin-top: 10px;
