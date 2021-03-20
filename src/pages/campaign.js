@@ -1,17 +1,37 @@
 import React from 'react'
 import Dashnav from '../components/dashnav';
 import Campcard from '../components/campcard';
+import api from '../utils/apiCalls';
 // import Democarasol from '../components/caraso/l'
 
 class Landingpage extends React.Component {
+  state = {
+    title: '',
+    tagline: '',
+    desc: '',
+    moneyRaised:'',
+    token: ''
+  }
   constructor (props) {
     super(props)
-    this.state = {}
   }
 
   componentDidMount () {
+    let token = localStorage.getItem("token")
+    this.setState({
+      token,
+    })
   }
-
+  handleSubmit = async (e) => {
+    e.preventDefault();
+    let response = await api.CreateCampaign(this.state.token, this.state.tagline,
+        this.state.desc, this.state.moneyRaised, this.state.title)
+    if (response.code == 201) {
+      alert("campaign created!")
+    } else {
+      alert("Campaign Creation Failed!")
+    }
+  }
   render () {
     return (
       <div>
@@ -24,26 +44,34 @@ class Landingpage extends React.Component {
               <label className='loglab'>
                 Campaign Title
               </label>
-              <input className='logpu'/>
+              <input className='logpu' value={this.state.title} onChange={(e) => this.setState({
+                title: e.target.value,
+              })}/>
               <br/>
               <br/>
               <label className='loglab'>
                 Campaign Tagline
               </label>
-              <input className='logpu'/>
+              <input className='logpu'value={this.state.tagline} onChange={(e) => this.setState({
+                tagline: e.target.value,
+              })}/>
               <br/>
               <br/>
               <label className='loglab'>
                 Campaign Description
               </label>
-              <input className='logpu'/>
+              <input className='logpu' value={this.state.desc} onChange={(e) => this.setState({
+                desc: e.target.value,
+              })}/>
               <br/>
               <br/>
               <label className='loglab'>
                 Target money to be raised
               </label>
-              <input className='logpu'/>
-              <button type="submit">
+              <input className='logpu' type="number" value={this.state.moneyRaised} onChange={(e) => this.setState({
+                moneyRaised: e.target.value,
+              })}/>
+              <button type="submit" onClick={this.handleSubmit}>
                 Start Campaign
               </button>
             </form>
