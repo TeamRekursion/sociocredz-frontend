@@ -204,6 +204,12 @@
       height: 70vh;
       box-shadow: 1px 1px 14px rgba(164, 27, 228, 0.35);
   }
+  .him{
+      margin-top:-10px;
+      font-weight: 300;
+      font-size: 12px;
+
+  }
 
 
 
