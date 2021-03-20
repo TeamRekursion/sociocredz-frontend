@@ -156,9 +156,24 @@
     justify-content: center;
 }
 .logo{
+    /* border-style: solid; */
+    height: fit-content;
     margin-top: 80px;
     width:140px;
 }
+.active > li > .icon > .log{
+    display:none;
+  }
+.gg > li > span > .log-active{
+    display:none;
+  }
+  .active > li > span > .log-active{
+    display:block;
+  }
+
+  .gg > li > span > .log{
+    display:block;
+  }
 
 
 
