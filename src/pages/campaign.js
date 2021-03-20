@@ -72,9 +72,26 @@ class Landingpage extends React.Component {
               <input className='logpu' type="number" value={this.state.moneyRaised} onChange={(e) => this.setState({
                 moneyRaised: e.target.value,
               })}/>
-              <button type="submit" onClick={this.handleSubmit}>
-                Start Campaign
-              </button>
+  <br/>
+    <br/>
+              <div style={{
+                paddingLeft: '10%'
+              }}>
+                <button type="submit" onClick={this.handleSubmit} style={{
+                  width: '488px',
+                  height: '63px',
+                  background: '#A41BE4',
+                  borderRadius: '44.1px',
+                  fontFamily: 'Poppins',
+                  fontStyle: 'normal',
+                  fontWeight: 'bold',
+                  fontSize: '24px',
+                  lineHeight: '36px',
+                  color: '#FFFFFF'
+                }}>
+                  Start Campaign
+                </button>
+              </div>
             </form>
           </div>
           <div className="rightg">

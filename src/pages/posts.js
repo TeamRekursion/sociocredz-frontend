@@ -59,10 +59,29 @@ class Posts extends React.Component {
               <input className='logpu' value={this.state.desc} onChange={(e) => this.setState({
                 desc: e.target.value,
               })}/>
+              <br/>
+              <br/>
+              <br/>
 
-              <button type="submit" onClick={this.handleSubmit}>
-                Publish the post
-              </button>
+
+              <div style={{
+                paddingLeft: '10%'
+              }}>
+                <button type="submit" onClick={this.handleSubmit} style={{
+                  width: '488px',
+                  height: '63px',
+                  background: '#A41BE4',
+                  borderRadius: '44.1px',
+                  fontFamily: 'Poppins',
+                  fontStyle: 'normal',
+                  fontWeight: 'bold',
+                  fontSize: '24px',
+                  lineHeight: '36px',
+                  color: '#FFFFFF'
+                }}>
+                  Publish the post
+                </button>
+              </div>
             </form>
           </div>
           <div className="rightg">
