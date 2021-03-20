@@ -1,7 +1,12 @@
+import './App.css'
+// import Landingpage from './pages/landing'
+import Loginpage from './pages/loginpage';
+import More from './pages/more'
+// import Dashnav from './components/dashnav'
 import './App.css';
 import Landingpage from './pages/landing'
-import Loginpage from './pages/loginpage';
-import More from './pages/more';
+// import Loginpage from './pages/loginpage';
+// import More from './pages/more';
 import Campaign from './pages/campaign';
 import { BrowserRouter as Router, Switch , Route} from 'react-router-dom';
 // import {Link} from 'react-router-dom';
@@ -17,10 +22,6 @@ function App () {
         <Route path="/more" component={More}/>
         <Route path="/campaign" component={Campaign}/>
       </Switch>
-      {/* <Dashnav/> */}
-      {/* <Loginpage/> */}
-      {/* <More /> */}
-      {/* <Landingpage/> */}
     </div>
     </Router>
   );

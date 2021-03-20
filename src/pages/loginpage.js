@@ -10,10 +10,27 @@ class Loginpage extends React.Component {
     }
   }
 
+  checkIfLogin = (x) => {
+    let token = localStorage.getItem("token");
+    if (token) {
+      if(x)
+        this.props.history.push("more");
+      else
+        this.props.history.push("dash")
+      console.log("pushed to more")
+    }
+  }
+  componentDidMount() {
+    this.checkIfLogin(false)
+  }
+
   firebasetoken () {
     const cb = (x) => {
       this.setState({ idToken: x })
       // console.log(this.state.idToken);
+    }
+    const cb1 =(v) => {
+      this.checkIfLogin(v)
     }
     const firebaseConfig = {
       apiKey: 'AIzaSyBLXwEsbaAuOUr9N_Q9kpBVY-vSWEjm8zs',
@@ -33,12 +50,12 @@ class Loginpage extends React.Component {
       const user = result.user
       user.getIdToken().then((data) => {
         cb(data)
-
         console.log(data)
         postRequest('https://sociocredz.herokuapp.com/api/v1/ngo/login', { idToken: data })
           .then(data => {
             console.log(data)
             localStorage.setItem('token', data.jwt)
+            cb1(data.firstLogin)
           }) // Result from the `response.json()` call
           .catch(error => console.error(error))
 
