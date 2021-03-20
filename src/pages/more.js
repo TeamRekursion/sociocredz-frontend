@@ -26,6 +26,24 @@ class More extends React.Component{
                       <br/>
                       <label className="loglab">Brief description about your NGO.</label>
                       <input type="text-area" className="logput"/>
+                      <br/>
+                      <div className="fle">
+                      <div className="lef">
+                      <h4 className="head1">Get your NGO verified.</h4>
+                      <h5 className="head2">Upload a valid authentication certificate</h5>
+                      </div>
+                            <div>
+                                <button className="rg">
+                                    Upload
+                                </button>
+                            </div>
+                      </div>
+                      {/* <div className="bot"> */}
+                          <button className="bott">
+                              Submit
+                          </button>
+                      {/* </div> */}
+                      
                   </form>
               </div>
 
