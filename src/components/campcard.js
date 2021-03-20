@@ -14,6 +14,14 @@ class Campcard extends React.Component {
       <div>
         <h3 style={{color:"#A41BE4"}}>Your Campaigns</h3>
             <h6 className="him">Here are your recent campaigns.</h6>
+        <div className="card">
+            <span>CampaignTitle | <span style={{color:"#a41be4"}}>#Nox</span></span>
+
+            <h5 style={{color:"#fc7b22"}}>Raised Credits</h5>
+            <h1 className="kam"><span>69420 <img src={1} alt="cred"/></span></h1>
+            <h6>Pledged Goal</h6>
+            <h3 className="kam"><span>1,00,000 <img src={1} alt="cred"/></span></h3>
+        </div>
       </div>
     )
   }
