@@ -1,18 +1,18 @@
-import './App.css';
+import './App.css'
 // import Landingpage from './pages/landing'
 // import Loginpage from './pages/loginpage';
-// import More from './pages/more';
-import Dashnav from './components/dashnav';
+import More from './pages/more'
+import Dashnav from './components/dashnav'
 
-function App() {
+function App () {
   return (
-    <div className="App">
-      <Dashnav/>
+    <div className='App'>
+      {/* <Dashnav/> */}
       {/* <Loginpage/> */}
-      {/* <More/> */}
+      <More />
       {/* <Landingpage/> */}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
