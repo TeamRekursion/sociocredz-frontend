@@ -8,7 +8,7 @@ class Posts extends React.Component {
   state = {
     title: '',
     desc: '',
-    postPhotoUrl: '',
+    postPhotoUrl: 'https://penji.co/wp-content/uploads/2019/08/red-cross-uganda-non-profit-posters.jpg',
     token: ''
   }
   constructor (props) {
@@ -25,9 +25,9 @@ class Posts extends React.Component {
     e.preventDefault();
     let response = await api.CreatePost(this.state.token, this.state.title, this.state.desc, this.state.postPhotoUrl)
     if (response.code == 201) {
-      alert("campaign created!")
+      alert("Post created!")
     } else {
-      alert("Campaign Creation Failed!")
+      alert("Post Creation Failed!")
     }
   }
   render () {
@@ -55,7 +55,7 @@ class Posts extends React.Component {
               })}/>
 
               <button type="submit" onClick={this.handleSubmit}>
-                Start Campaign
+                Publish the post
               </button>
             </form>
           </div>
