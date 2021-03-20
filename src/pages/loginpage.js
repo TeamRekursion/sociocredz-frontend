@@ -16,7 +16,7 @@ class Loginpage extends React.Component {
       if(x)
         this.props.history.push("more");
       else
-        this.props.history.push("dash")
+        this.props.history.push("campaign")
       console.log("pushed to more")
     }
   }
