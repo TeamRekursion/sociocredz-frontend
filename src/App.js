@@ -5,8 +5,6 @@ import More from './pages/more'
 import Dashnav from './components/dashnav'
 import './App.css';
 import Landingpage from './pages/landing'
-import Loginpage from './pages/loginpage';
-import More from './pages/more';
 import { BrowserRouter as Router, Switch , Route} from 'react-router-dom';
 // import {Link} from 'react-router-dom';
 // import Dashnav from './components/dashnav';
