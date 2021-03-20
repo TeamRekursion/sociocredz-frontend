@@ -15,6 +15,15 @@ class Landingpage extends React.Component {
     return (
       <div>
         <Dashnav/>
+        <div className="grid-set">
+          <div className="leftg">
+            <h3 style={{color:"#fc7b22"}}>Start a Campaign</h3>
+            <h6>Campaigns allow you to crowdfund your charity events.</h6>
+          </div>
+          <div className="rightg">
+            right
+          </div>
+        </div>
       </div>
     )
   }

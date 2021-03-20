@@ -27,11 +27,11 @@ class Dashnav extends React.Component {
                 <div>
             <ul className="menu-dropdown">
                 <NavLink to="/home" className= "gg" activeClassName="active">
-                        <li><span className="icon"><img src={home} className="log" alt="home"/><img src={homea} className="log-active" alt="home"/>Home</span></li>
+                        <li><span className="icon"><img src={home} className="log" alt="home"/><img src={homea} className="log-active" alt="home"/></span>Home</li>
                         {/* <li>Home</li> */}
                 </NavLink>
 
-                <NavLink exact to="/campaigns" className= "gg" activeClassName="active">
+                <NavLink to="/campaign" className= "gg" activeClassName="active">
                         <li><span className="icon"><img src={campaigns} className="log" alt="home"/><img src={campaignsA} className="log-active" alt="home"/></span>Campaigns</li>
                         {/* <li>Campaigns</li> */}
                 </NavLink>
