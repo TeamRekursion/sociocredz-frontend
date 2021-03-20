@@ -4,12 +4,11 @@ import Campcard from '../components/campcard';
 import api from '../utils/apiCalls';
 // import Democarasol from '../components/caraso/l'
 
-class Landingpage extends React.Component {
+class Posts extends React.Component {
   state = {
     title: '',
-    tagline: '',
     desc: '',
-    moneyRaised:'',
+    postPhotoUrl: 'https://penji.co/wp-content/uploads/2019/08/red-cross-uganda-non-profit-posters.jpg',
     token: ''
   }
   constructor (props) {
@@ -24,12 +23,11 @@ class Landingpage extends React.Component {
   }
   handleSubmit = async (e) => {
     e.preventDefault();
-    let response = await api.CreateCampaign(this.state.token, this.state.tagline,
-        this.state.desc, this.state.moneyRaised, this.state.title)
+    let response = await api.CreatePost(this.state.token, this.state.title, this.state.desc, this.state.postPhotoUrl)
     if (response.code == 201) {
-      alert("campaign created!")
+      alert("Post created!")
     } else {
-      alert("Campaign Creation Failed!")
+      alert("Post Creation Failed!")
     }
   }
   render () {
@@ -38,11 +36,11 @@ class Landingpage extends React.Component {
         <Dashnav/>
         <div className="grid-set">
           <div className="leftg">
-            <h3 style={{color:"#fc7b22"}}>Start a Campaign</h3>
+            <h3 style={{color:"#fc7b22"}}>Make a post</h3>
             <h6 className="him">Campaigns allow you to crowdfund your charity events.</h6>
             <form>
               <label className='loglab'>
-                Campaign Title
+                Post Title
               </label>
               <input className='logpu' value={this.state.title} onChange={(e) => this.setState({
                 title: e.target.value,
@@ -50,29 +48,14 @@ class Landingpage extends React.Component {
               <br/>
               <br/>
               <label className='loglab'>
-                Campaign Tagline
-              </label>
-              <input className='logpu'value={this.state.tagline} onChange={(e) => this.setState({
-                tagline: e.target.value,
-              })}/>
-              <br/>
-              <br/>
-              <label className='loglab'>
-                Campaign Description
+                Post Description
               </label>
               <input className='logpu' value={this.state.desc} onChange={(e) => this.setState({
                 desc: e.target.value,
               })}/>
-              <br/>
-              <br/>
-              <label className='loglab'>
-                Target money to be raised
-              </label>
-              <input className='logpu' type="number" value={this.state.moneyRaised} onChange={(e) => this.setState({
-                moneyRaised: e.target.value,
-              })}/>
+
               <button type="submit" onClick={this.handleSubmit}>
-                Start Campaign
+                Publish the post
               </button>
             </form>
           </div>
@@ -84,4 +67,4 @@ class Landingpage extends React.Component {
     )
   }
 }
-export default Landingpage
+export default Posts
