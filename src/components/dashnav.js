@@ -1,5 +1,15 @@
-import React from 'react'
-import Logo from '../Assets/SOCIOCREDZ_LOGO.svg'
+import React from 'react';
+import Logo from '../Assets/SOCIOCREDZ_LOGO.svg';
+import { BrowserRouter as Router, NavLink} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
+import home from '../Assets/home_unselected.svg';
+import homea from '../Assets/home_selected.svg';
+import campaigns from '../Assets/campaigns_unselected.svg';
+import campaignsA from '../Assets/campaigns_selected.svg';
+import post from '../Assets/post_unselected.svg';
+import postA from '../Assets/post_selected.svg';
+import donation from '../Assets/donations_unselected.svg';
+// import campaignsA from '../Assets/campaigns_selected';
 
 class Dashnav extends React.Component {
   constructor (props) {
@@ -7,15 +17,35 @@ class Dashnav extends React.Component {
     this.state = {}
   }
 
-  componentDidMount () {
-  }
+      componentDidMount() {
+      }
+      render() {
+        return(
+            <Router>
+                <div className="coom">
+                    <img src={Logo} alt="logo" className="logo"/>
+                <div>
+            <ul className="menu-dropdown">
+                <NavLink exact to="/" className= "gg" activeClassName="active">
+                        <li><span className="icon"><img src={home} className="log" alt="home"/><img src={homea} className="log-active" alt="home"/></span>Home</li>
+                </NavLink>
 
-  render () {
-    return (
-      <div className='coom'>
-        <img src={Logo} alt='logo' className='logo' />
-      </div>
-    )
-  }
+                <NavLink exact to="/campaigns" className= "gg" activeClassName="active">
+                        <li><span className="icon"><img src={campaigns} className="log" alt="home"/><img src={campaignsA} className="log-active" alt="home"/></span>Campaigns</li>
+                </NavLink>
+
+                <NavLink to="/posts" className= "gg" activeClassName="active">
+                        <li><span className="icon"><img src={post} className="log" alt="home"/><img src={postA} className="log-active" alt="home"/></span>Create a Post</li>
+                </NavLink>
+
+                <NavLink to="/Donations" className= "gg" activeClassName="active">
+                        <li><span className="icon"><img src={donation} className="log" alt="home"/><img src={1} className="log-active" alt="home"/></span>Donations</li>
+                </NavLink>
+            </ul>
+              </div>
+          </div>
+          </Router>
+              )
+      }
 }
 export default Dashnav
