@@ -72,8 +72,8 @@ class Landingpage extends React.Component {
               <input className='logpu' type="number" value={this.state.moneyRaised} onChange={(e) => this.setState({
                 moneyRaised: e.target.value,
               })}/>
-  <br/>
-    <br/>
+                <br/>
+                <br/>
               <div style={{
                 paddingLeft: '10%'
               }}>

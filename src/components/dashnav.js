@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../Assets/SOCIOCREDZ_LOGO.svg';
-import { BrowserRouter as Router, NavLink} from 'react-router-dom';
+import {BrowserRouter as Router, Link, NavLink} from 'react-router-dom';
 // import {Link} from 'react-router-dom';
 import home from '../Assets/home_unselected.svg';
 import homea from '../Assets/home_selected.svg';
@@ -25,29 +25,78 @@ class Dashnav extends React.Component {
                 <div className="coom">
                     <img src={Logo} alt="logo" className="logo"/>
                 <div>
-            <ul className="menu-dropdown">
-                <NavLink to="/home" className= "gg" activeClassName="active">
-                        <li><span className="icon"><img src={home} className="log" alt="home"/><img src={homea} className="log-active" alt="home"/></span>Home</li>
-                        {/* <li>Home</li> */}
-                </NavLink>
+            <ul className="menu-dropdown" >
+                {/*<a href={"/home"} className= "gg" activeClassName="active">*/}
+                {/*        <li><span className="icon"><img src={home} className="log" alt="home"/>*/}
+                {/*        <img src={homea} className="log-active" alt="home"/></span>Home</li>*/}
+                {/*</a>*/}
 
-                <NavLink to="/campaign" className= "gg" activeClassName="active">
-                        <li><span className="icon"><img src={campaigns} className="log" alt="home"/><img src={campaignsA} className="log-active" alt="home"/></span>Campaigns</li>
-                        {/* <li>Campaigns</li> */}
-                </NavLink>
+                <a href="/campaign" className= "gg" activeClassName="active" style={{
+                    textDecoration: 'none'
+                }}>
 
-                <NavLink to="/posts" className= "gg" activeClassName="active">
-                        <li><span className="icon"><img src={home} className="log" alt="home"/><img src={homea} className="log-active" alt="home"/></span>Create a Post</li>
-                        {/* <li>Create a Post</li> */}
-                </NavLink>
+                    <table>
+                        <tr> <td>
+                            <img src={campaigns} className="log" alt="home"/>
+                        </td>
+                            <td>
+                                Campaigns
+                            </td>
+                        </tr>
+                    </table>
 
-                <NavLink to="/Donations" className= "gg" activeClassName="active">
-                        <li><span className="icon"><img src={campaigns} className="log" alt="home"/><img src={campaignsA} className="log-active" alt="home"/></span>Donations</li>
-                        {/* <li>Donations</li> */}
-                </NavLink>
+                </a>
+
+                <a href="/posts" className= "gg" activeClassName="active" style={{
+                    textDecoration: 'none'
+                }}>
+                    <table>
+                        <tr> <td>
+                            <img src={home} className="log" alt="home"/>
+                        </td>
+                            <td>
+                                Create a Post
+                            </td>
+                        </tr>
+                    </table>
+                </a>
+
+                <a href="/donations" className= "gg" activeClassName="active" style={{
+                    textDecoration: 'none'
+                }}>
+                    <table>
+                        <tr> <td>
+                            <img src={campaigns} className="log" alt="home"/>
+                        </td>
+                            <td>
+                                Donations
+                            </td>
+                        </tr>
+                    </table>
+
+                </a>
             </ul>
               </div>
           </div>
+                <div>
+                    <button style={{
+                        width: '215.46px',
+                        height: '63px',
+                        background: '#A41BE4',
+                        borderRadius: '44.1px',
+                        fontFamily: 'Poppins',
+                        fontStyle: 'normal',
+                        fontWeight: 'bold',
+                        fontSize: '24px',
+                        lineHeight: '36px',
+                        /* identical to box height */
+
+
+                        color: '#FFFFFF',
+                    }}>
+                        Logout
+                    </button>
+                </div>
           </Router>
               )
       }
