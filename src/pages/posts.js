@@ -1,6 +1,6 @@
 import React from 'react'
 import Dashnav from '../components/dashnav';
-import Campcard from '../components/campcard';
+// import Campcard from '../components/campcard';
 import api from '../utils/apiCalls';
 import PostCard from "../components/PostCard";
 // import Democarasol from '../components/caraso/l'
@@ -12,9 +12,9 @@ class Posts extends React.Component {
     postPhotoUrl: 'https://penji.co/wp-content/uploads/2019/08/red-cross-uganda-non-profit-posters.jpg',
     token: ''
   }
-  constructor (props) {
-    super(props)
-  }
+  // constructor (props) {
+  //   super(props)
+  // }
 
   // fetchLast = () => {
   //   api.FetchCampaigns
@@ -30,7 +30,7 @@ class Posts extends React.Component {
   handleSubmit = async (e) => {
     e.preventDefault();
     let response = await api.CreatePost(this.state.token, this.state.title, this.state.desc, this.state.postPhotoUrl)
-    if (response.code == 201) {
+    if (response.code === 201) {
       alert("Post created!")
     } else {
       alert("Post Creation Failed!")
@@ -56,7 +56,7 @@ class Posts extends React.Component {
               <label className='loglab'>
                 Post Description
               </label>
-              <input className='logpu' value={this.state.desc} onChange={(e) => this.setState({
+              <input className='logpu1' value={this.state.desc} onChange={(e) => this.setState({
                 desc: e.target.value,
               })}/>
               <br/>
@@ -64,21 +64,10 @@ class Posts extends React.Component {
               <br/>
 
 
-              <div style={{
-                paddingLeft: '10%'
-              }}>
-                <button type="submit" onClick={this.handleSubmit} style={{
-                  width: '80%',
-                  height: '30%',
-                  background: '#A41BE4',
-                  borderRadius: '44.1px',
-                  fontFamily: 'Poppins',
-                  fontStyle: 'normal',
-                  fontWeight: 'bold',
-                  fontSize: '90%',
-                  lineHeight: '36px',
-                  color: '#FFFFFF'
-                }}>
+              <div>
+              <input type="file" id="actual-btn" hidden className="sq1"/>
+              <label for="actual-btn" className="sq">Upload post</label>
+                <button type="submit" onClick={this.handleSubmit} className="mk1">
                   Publish the post
                 </button>
               </div>

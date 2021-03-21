@@ -1,6 +1,6 @@
 import React from 'react'
 import Dashnav from '../components/dashnav';
-import Campcard from '../components/campcard';
+// import Campcard from '../components/campcard';
 import api from '../utils/apiCalls';
 // import Democarasol from '../components/caraso/l'
 
@@ -9,14 +9,8 @@ function DonationsCard(props) {
     let { name, credits, donationId }  = props;
     return (
         <div style={{
-            margin: '1%',
-            width: '1161.25px',
-            height: '184.98px',
-            background: '#F8F8F8',
-            borderRadius: '15px',
-            display: 'flex',
-            alignContent: 'space-between',
-        }}>
+            
+        }} className="main">
             {/*<div>*/}
 
             {/*</div>*/}
@@ -72,9 +66,9 @@ class Landingpage extends React.Component {
         token: '',
 
     }
-    constructor (props) {
-        super(props)
-    }
+    // constructor (props) {
+    //     super(props)
+    // }
 
     updateDonations = async () => {
         let response = await api.FetchDonations(this.state.token);
@@ -98,7 +92,7 @@ class Landingpage extends React.Component {
         e.preventDefault();
         let response = await api.CreateCampaign(this.state.token, this.state.tagline,
             this.state.desc, this.state.moneyRaised, this.state.title)
-        if (response.code == 201) {
+        if (response.code === 201) {
             alert("campaign created!")
         } else {
             alert("Campaign Creation Failed!")
@@ -108,7 +102,7 @@ class Landingpage extends React.Component {
         return (
             <div>
                 <Dashnav/>
-                <div className="grid-set">
+                {/* <div className="grid-set">
                     <div style={{
                         display: 'flex',
                         flex: 1,
@@ -137,22 +131,28 @@ class Landingpage extends React.Component {
                                 fontSize: '36px',
                                 lineHeight: '54px',
                                 color: '#F78D1D'
-                            }}>Donations</div>
-                            <div style={{
-                                padding: '10px',
-                                display: 'flex',
-                                margin: '10px',
-                                flexDirection: 'column'
-                            }}>
-
+                            }}>Donations</div> */}
+                            <div className="org">
+                                <div className="reor">
+                                    <h2 className="his">Donations</h2>
+                                <div style={{
+                                    padding: '10px',
+                                    display: 'flex',
+                                    margin: '10px',
+                                    flexDirection: 'column'
+                                }} className="cod">
                                 {this.state.donations.map( (e, i) => {
                                     return (<DonationsCard key={i} name={e.User.userName} credits={e.amount} donationId={e.donationId} />)
                                 })}
 
+                                </div>
+                                </div>
+                                
                             </div>
-                        </div>
+                            
+                        {/* </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         )
     }

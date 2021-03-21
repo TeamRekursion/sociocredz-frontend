@@ -1,5 +1,6 @@
 import React from 'react'
 import api from "../utils/apiCalls";
+import soc from "../Assets/sociocredz.svg"
 
 class Campcard extends React.Component {
     state = {
@@ -43,9 +44,13 @@ class Campcard extends React.Component {
             <span>{this.state.title} | <span style={{color:"#a41be4"}}>{this.state.tagline}</span></span>
 
             <h5 style={{color:"#fc7b22"}}>Raised Credits</h5>
-            <h1 className="kam"><span>{this.state.moneyRaised}</span></h1>
+            <h1 className="kam"><span>{this.state.moneyRaised}
+            <img src={soc} alt="soc" className="soc"/>
+            </span></h1>
             <h6>Pledged Goal</h6>
-            <h3 className="kam"><span>{this.state.moneyRequired}</span></h3>
+            <h3 className="kam"><span>{this.state.moneyRequired}
+            <img src={soc} alt="soc" className="soc1"/>
+            </span></h3>
         </div>
       </div>
     )

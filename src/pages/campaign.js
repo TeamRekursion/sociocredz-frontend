@@ -12,9 +12,9 @@ class Landingpage extends React.Component {
     moneyRaised:'',
     token: '',
   }
-  constructor (props) {
-    super(props)
-  }
+  // constructor (props) {
+  //   super(props)
+  // }
 
   async componentDidMount () {
     let token = localStorage.getItem("token")
@@ -26,7 +26,7 @@ class Landingpage extends React.Component {
     e.preventDefault();
     let response = await api.CreateCampaign(this.state.token, this.state.tagline,
         this.state.desc, this.state.moneyRaised, this.state.title)
-    if (response.code == 201) {
+    if (response.code === 201) {
       alert("campaign created!")
     } else {
       alert("Campaign Creation Failed!")
@@ -73,21 +73,8 @@ class Landingpage extends React.Component {
               })}/>
                 <br/>
                 <br/>
-              <div style={{
-                paddingLeft: '10%'
-              }}>
-                <button type="submit" onClick={this.handleSubmit} style={{
-                  width: '80%',
-                  height: '30%',
-                  background: '#A41BE4',
-                  borderRadius: '44.1px',
-                  fontFamily: 'Poppins',
-                  fontStyle: 'normal',
-                  fontWeight: 'bold',
-                  fontSize: '90%',
-                  lineHeight: '36px',
-                  color: '#FFFFFF'
-                }}>
+              <div>
+                <button type="submit" onClick={this.handleSubmit} className="mk">
                   Start Campaign
                 </button>
               </div>

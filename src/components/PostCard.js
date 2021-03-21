@@ -7,9 +7,9 @@ class PostCard extends React.Component {
         title: '',
         desc: '',
     }
-  constructor (props) {
-    super(props)
-  }
+  // constructor (props) {
+  //   super(props)
+  // }
 
     fetchLast = async () => {
         let response = await api.FetchPosts(this.state.token)
@@ -37,16 +37,16 @@ class PostCard extends React.Component {
         <h3 style={{color:"#A41BE4"}}>Your Posts</h3>
             <h6 className="him">Here are your recent posts.</h6>
         <div className="card-post">
-            <h1>{this.state.title}</h1>
+            <h3>{this.state.title}</h3>
 
             <img src={this.state.photoURL} style={{
                 maxHeight: '60%',
                 maxWidth:'80%',
                 alignSelf: 'center'
-            }} />
-
-            <h6>Description</h6>
-            <h3 className="kam"><span>{this.state.desc}</span></h3>
+            }} alt="alt"/>
+            {/* <h5 style={{fontWeight:"500"}}>Description</h5> */}
+            <h6 className="kam" style={{fontWeight:"500", marginTop:"25px"}}><span>{this.state.desc}</span></h6>
+            {/* <h3 className="kam"><span>Esse velit ad ad do commodo amet ea ea reprehenderit aute. Irure aute dolor amet nulla amet tempor dolor nostrud. Aliqua labore eiusmod do incididunt laborum aute aliquip nisi qui.</span></h3> */}
         </div>
       </div>
     )
