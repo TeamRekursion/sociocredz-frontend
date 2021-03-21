@@ -15,6 +15,7 @@ async function UpdateNGODetails (token, ngoName, ngoDescription) {
   return respJSON
 }
 
-module.exports = {
+let z = {
   UpdateNGODetails
 }
+export default z

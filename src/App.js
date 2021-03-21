@@ -20,7 +20,7 @@ function App () {
     <Router>
     <div className="App">
       <Switch>
-        <Route path="/" exact component={Landingpage}/>
+        <Route path="/" exact component={Loginpage}/>
         <Route path="/login" component={Loginpage}/>
         <Route path="/more" component={More}/>
         <Route path="/campaign" component={Campaign}/>

@@ -1,6 +1,7 @@
 import React from 'react'
 import firebase from 'firebase/app'
 import 'firebase/auth'
+import bgc from '../Assets/leftside.png'
 
 class Loginpage extends React.Component {
   constructor (props) {
@@ -79,7 +80,10 @@ class Loginpage extends React.Component {
   render () {
     return (
       <div className='logcont'>
-        <div className='left'>left column</div>
+        <div className='left' style={{
+          backgroundImage: `url(${bgc})`,
+          backgroundSize: 'contain',
+        }}></div>
         <div className='rig'>
           <h2>Sign in to Sociocredz!</h2>
           <button className='signu' onClick={() => this.firebasetoken()}>G<span style={{ color: '#FC9F25' }}>......</span>|<span style={{ color: '#FC9F25' }}>.....</span>    Sign in with Google</button>

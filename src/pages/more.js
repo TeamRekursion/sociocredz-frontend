@@ -2,6 +2,7 @@ import React from 'react';
 import postNgoUpdate from '../utils/postNgoUpdate'
 // import Navbar from '../components/navbar';
 // import Democarasol from '../components/carasol';
+import bgc from '../Assets/leftside.png'
 
 class More extends React.Component{
     state = {
@@ -42,7 +43,10 @@ class More extends React.Component{
       render() {
         return(
             <div className="logcont">
-              <div className="left">left column</div>
+                <div className='left' style={{
+                    backgroundImage: `url(${bgc})`,
+                    backgroundSize: 'contain'
+                }}></div>
               <div className="righ">
                   <h1>Tell us more about your NGO!</h1>
                   <br/>

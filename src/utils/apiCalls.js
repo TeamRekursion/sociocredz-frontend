@@ -93,7 +93,7 @@ async function UploadVideoProof(token, donations, proofVideoUrl) {
     return respJSON
 }
 
-module.exports = {
+let z = {
     CreatePost,
     CreateCampaign,
     FetchCampaigns,
@@ -102,3 +102,4 @@ module.exports = {
     FetchDonations,
     UploadVideoProof
 }
+export default z
