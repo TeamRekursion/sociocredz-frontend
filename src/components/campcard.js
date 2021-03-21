@@ -15,8 +15,9 @@ class Campcard extends React.Component {
     fetchLast = async () => {
         let response = await api.FetchCampaigns(this.state.token)
         let { data }  = response;
+        if (data.length === 0) return;
         let top = data[0];
-        if (!top) return;
+
         this.setState({
             title: top.title,
             tagline: top.tagline,
