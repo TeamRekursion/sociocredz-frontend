@@ -22,7 +22,7 @@ class Campcard extends React.Component {
             title: top.title,
             tagline: top.tagline,
             moneyRequired: top.moneyRequired,
-            moneyRaised: top.moneyRaised
+            moneyRaised: (top.moneyRaised) ? top.moneyRaised : 0,
         })
     }
     async componentDidMount () {
