@@ -16,7 +16,10 @@ class Dashnav extends React.Component {
     super(props)
     this.state = {}
   }
-
+HandleLogout = () => {
+      localStorage.removeItem("token")
+      window.location.href = "/login"
+}
       componentDidMount() {
       }
       render() {
@@ -77,26 +80,29 @@ class Dashnav extends React.Component {
                 </a>
             </ul>
               </div>
-          </div>
-                <div>
-                    <button style={{
-                        width: '215.46px',
-                        height: '63px',
-                        background: '#A41BE4',
-                        borderRadius: '44.1px',
-                        fontFamily: 'Poppins',
-                        fontStyle: 'normal',
-                        fontWeight: 'bold',
-                        fontSize: '24px',
-                        lineHeight: '36px',
-                        /* identical to box height */
-
-
-                        color: '#FFFFFF',
+                    <div style={{
+                        paddingLeft: '22%'
                     }}>
-                        Logout
-                    </button>
-                </div>
+                        <button style={{
+                            width: '215.46px',
+                            height: '63px',
+                            background: '#A41BE4',
+                            borderRadius: '44.1px',
+                            fontFamily: 'Poppins',
+                            fontStyle: 'normal',
+                            fontWeight: 'bold',
+                            fontSize: '24px',
+                            lineHeight: '36px',
+                            /* identical to box height */
+
+
+                            color: '#FFFFFF',
+                        }} onClick={this.HandleLogout}>
+                            Logout
+                        </button>
+                    </div>
+          </div>
+
           </Router>
               )
       }

@@ -19,7 +19,9 @@ class Navbar extends React.Component {
           <a href={1} className='navlinks'>Home</a>
           <a href={1} className='navlinks'>About Us</a>
           <a href={1} className='navlinks'>Contact Us</a>
-          <button className='navlinks logibut' style={{ color: 'white' }}>Login</button>
+          <button className='navlinks logibut' style={{ color: 'white' }} onClick={()=> {
+              window.location.href = "/login";
+          }}>Login</button>
         </div>
       </div>
     )
