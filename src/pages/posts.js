@@ -68,14 +68,14 @@ class Posts extends React.Component {
                 paddingLeft: '10%'
               }}>
                 <button type="submit" onClick={this.handleSubmit} style={{
-                  width: '488px',
-                  height: '63px',
+                  width: '80%',
+                  height: '30%',
                   background: '#A41BE4',
                   borderRadius: '44.1px',
                   fontFamily: 'Poppins',
                   fontStyle: 'normal',
                   fontWeight: 'bold',
-                  fontSize: '24px',
+                  fontSize: '90%',
                   lineHeight: '36px',
                   color: '#FFFFFF'
                 }}>
