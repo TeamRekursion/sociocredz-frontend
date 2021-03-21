@@ -15,6 +15,7 @@ class PostCard extends React.Component {
         let response = await api.FetchPosts(this.state.token)
         let { data }  = response;
         let top = data[0];
+        if (!top) return;
         this.setState({
             title: top.postTitle,
             desc: top.postDescription,

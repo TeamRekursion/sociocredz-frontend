@@ -85,7 +85,7 @@ class Loginpage extends React.Component {
           backgroundSize: 'contain',
         }}></div>
         <div className='rig'>
-          <h2>Sign in to Sociocredz!</h2>
+          <h2>Sign in to SocioCredz!</h2>
           <button className='signu' onClick={() => this.firebasetoken()}>G<span style={{ color: '#FC9F25' }}>......</span>|<span style={{ color: '#FC9F25' }}>.....</span>    Sign in with Google</button>
           <div className='or'>OR</div>
           <form>

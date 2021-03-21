@@ -20,6 +20,7 @@ class More extends React.Component{
           console.log(response)
           if (response.code == 200) {
               console.log("update success!")
+              this.history.push("campaign")
           } else {
               console.log("update fail")
           }
@@ -74,14 +75,9 @@ class More extends React.Component{
                               Submit
                           </button>
                       {/* </div> */}
-                      
                   </form>
               </div>
-
           </div>
-
-
-
               )
       }
 }

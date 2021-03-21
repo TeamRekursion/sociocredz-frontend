@@ -11,7 +11,6 @@ class Landingpage extends React.Component {
     desc: '',
     moneyRaised:'',
     token: '',
-
   }
   constructor (props) {
     super(props)
